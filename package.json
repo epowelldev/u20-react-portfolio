@@ -1,5 +1,6 @@
 {
   "name": "u20-react-portfolio",
+  "homepage": "https://epowelldev.github.io/u20-react-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
