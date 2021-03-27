@@ -12,11 +12,12 @@ import budgetBG from "../../assets/img/budgetBG.png";
 
 const useStyles = makeStyles({});
 
-const Portfolio = () => {
+const Portfolio = (props) => {
+  console.log(props);
   const classes = useStyles();
   return (
     <Fragment>
-      <Header title={"Portfolio"}/>
+      { (props.title == "Home") ? <Header title={"Home"}/> : <Header title={"Portfolio"}/> }
       <br />
       <Grid container>
         <Grid item xs={1} sm={2} />

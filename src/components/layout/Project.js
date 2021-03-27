@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 export default function SimpleCard({deployed, repo, title, desc, bgImg}) {
   const classes = useStyles();
 
-  console.log(deployed, repo, title, desc, bgImg)
+  // console.log(deployed, repo, title, desc, bgImg)
 
   const deployLink = `https://${deployed}/`;
   const githubLink = `https://${repo}`;
