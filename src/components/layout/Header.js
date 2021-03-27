@@ -15,13 +15,17 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   barStyle: {
-    backgroundColor: "#008545",
+    backgroundColor: "rgba(0, 133, 69, .50)",
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
+    color: "black"
+  },
+  appbarBG: {
+    backgroundColor: "#FFFFFF",
   },
 }));
 
@@ -47,8 +51,8 @@ export default function Header(pageName) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" className={classes.barStyle}>
-        <Toolbar>
+      <AppBar position="fixed" className={classes.appbarBG}>
+        <Toolbar className={classes.barStyle}>
           <Typography variant="h6" className={classes.title}>
             {title}
           </Typography>
@@ -60,7 +64,7 @@ export default function Header(pageName) {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <MenuIcon />
+                <MenuIcon style={{color:"black"}}/>
               </IconButton>
               <Menu
                 id="menu-appbar"

@@ -9,7 +9,6 @@ import { CardMedia } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
-  
   },
   title: {
     fontSize: 14,
@@ -32,24 +31,26 @@ export default function SimpleCard({deployed, repo, title, desc, bgImg}) {
 
   return (
     //style={{backgroundImage: `url(${projectBG})`}}
-    <Card style={{height:"25vh", position:"relative", backgroundImage:`src("${projectBG}")`, backgroundSize: "contain"}} >
-      <CardContent>
-        <CardMedia 
-          className={classes.media}
-          title={projectTitle}
-        />
-        <Typography variant="h5" component="h2">
-          {projectTitle}
-        </Typography>
-        <br />
-        <Typography variant="body2" component="p">
-          {projectDesc}
-        </Typography>
-      </CardContent>
-      <CardActions style={{float:"left", position:"absolute", bottom: "0"}}>
-        <Button href={deployLink} size="small">Deployed App</Button>
-        <Button href={githubLink} size="small">Repository</Button>
-      </CardActions>
+    <Card className={classes.root} style={{height:"25vh", position:"relative", backgroundImage: `url(${projectBG})`, backgroundSize: "cover" }}>
+      <div style={{backgroundColor: "rgba(255, 255, 255, 0.95)", height:"100vh"}}>
+        <CardContent>
+          <CardMedia 
+            className={classes.media}
+            title={projectTitle}
+          />
+          <Typography variant="h5" component="h2">
+            {projectTitle}
+          </Typography>
+          <br />
+          <Typography variant="body2" component="p">
+            {projectDesc}
+          </Typography>
+        </CardContent>
+        <CardActions style={{float:"left", position:"absolute", bottom: "0"}}>
+          <Button href={deployLink} size="small">Deployed App</Button>
+          <Button href={githubLink} size="small">Repository</Button>
+        </CardActions>
+      </div>
     </Card>
   );
 }
