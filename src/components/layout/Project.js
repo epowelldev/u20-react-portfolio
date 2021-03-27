@@ -9,18 +9,13 @@ import { CardMedia } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 350,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+  
   },
   title: {
     fontSize: 14,
   },
-  pos: {
-    marginBottom: 12,
+  CardContent: {
+    alignItems: "stretch",
   },
 });
 
@@ -29,29 +24,29 @@ export default function SimpleCard({deployed, repo, title, desc, bgImg}) {
 
   console.log(deployed, repo, title, desc, bgImg)
 
-  const deployLink = `https://epowelldev.github.io/${deployed}/`;
-  const githubLink = `https://www.github.com/epowelldev/${repo}`;
+  const deployLink = `https://${deployed}/`;
+  const githubLink = `https://${repo}`;
   const projectTitle = title;
   const projectDesc = desc;
-  const projectBG = `assets/img/${bgImg}.png`;
+  const projectBG = bgImg;
 
   return (
-    <Card>
+    //style={{backgroundImage: `url(${projectBG})`}}
+    <Card style={{height:"25vh", position:"relative", backgroundImage:`src("${projectBG}")`, backgroundSize: "contain"}} >
       <CardContent>
-        <CardMedia
+        <CardMedia 
           className={classes.media}
-          image={projectBG}
           title={projectTitle}
         />
         <Typography variant="h5" component="h2">
           {projectTitle}
         </Typography>
+        <br />
         <Typography variant="body2" component="p">
-          <br />
           {projectDesc}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions style={{float:"left", position:"absolute", bottom: "0"}}>
         <Button href={deployLink} size="small">Deployed App</Button>
         <Button href={githubLink} size="small">Repository</Button>
       </CardActions>

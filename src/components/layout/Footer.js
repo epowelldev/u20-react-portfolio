@@ -1,13 +1,13 @@
-import { AppBar, Toolbar, Typography, Link } from "@material-ui/core";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 function Copyright() {
   return (
-    <Typography>
-      {"Copyright © "}{"Erickson Powell "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
+      <Typography>
+        {"Copyright © "}{"Erickson Powell "}
+        {new Date().getFullYear()}
+        {"."}
+      </Typography>
   );
 };
 
@@ -30,7 +30,9 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     position: 'sticky',
     bottom: 0,
-    backgroundColor: "#008545",
+    color: "#008545",
+    // backgroundColor: "#008545",
+    backgroundColor: "white",
   },
 }));
 
@@ -41,7 +43,7 @@ const Footer = () => {
     <footer>
       <br /><br />
         <AppBar className={classes.appBar} >
-          <Toolbar>
+          <Toolbar style={{display: "flex", justifyContent: "center"}}>
             <Copyright />
           </Toolbar>
         </AppBar>
