@@ -1,10 +1,8 @@
-import { Box, Button, ButtonGroup, Container, Grid, IconButton, TextField, Typography } from "@material-ui/core";
+import { Box, Button, ButtonGroup, Grid, TextField } from "@material-ui/core";
 import { Fragment } from "react";
 import Header from "../layout/Header";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 
-const ContactMe = () => {
+const ContactMe = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -12,7 +10,7 @@ const ContactMe = () => {
 
   return (
     <Fragment>
-      <Header title={"Contact Me"}/>
+      { (props.title == "About Me") ? <Header title={"About Me"}/> : <Header title={"Contact Me"}/> }
       <br /><br />
       <form action="https://formspree.io/f/moqyayaz" method="POST">
         <Grid container>

@@ -30,7 +30,7 @@ const Home = () => {
           </Grid>
           <Grid item xs={12} sm={10}>
             <Typography>
-            I am a Full Stack developer that is set to gradutate from the Full Stack Flex coding bootcamp at the University of Washington at the end of March, 2021.
+            I am Erickson Powell, a Full Stack developer that is set to gradutate from the Full Stack Flex coding bootcamp at the University of Washington at the end of March, 2021.
             <br /><br />
             This is a sample of some of the work I have completed over the time so far during this course. 
             </Typography>
